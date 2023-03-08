@@ -1,72 +1,25 @@
 document.write('\
-<article id="team" class="wrapper style4">\
+<article id="team" class="wrapper style4" style="padding:100px 0px 40px 0px">\
     <div class="container">\
-        <header>\
-            <h2>We\'d like to hear from you.</h2>\
-            \
-            <div class="wrapper style5">\
-                <div class="row aln-center">\
-                    <div class="col-4 col-6-medium col-12-small">\
-                        <section class="box style3">\
-                            <span class="image profileIcon"><img src="images/logo.jpg" /></span><br>\
-                            <h3>Lonnie Gonzales</h3>\
-                            <p>Place self BIO here. Here is a practical framework you can leverage to introduce yourself with confidence in any context, online or in-person: Present, past, and future.</p>\
-                        </section>\
-                    </div>\
-                    <div class="col-4 col-6-medium col-12-small">\
-                        <section class="box style3">\
-                            <span class="image profileIcon"><img src="images/logo.jpg" /></span><br>\
-                            <h3>Miguel Pardiñas</h3> \
-                            <p>Place self BIO here. Here is a practical framework you can leverage to introduce yourself with confidence in any context, online or in-person: Present, past, and future.</p>\
-                        </section>\
-                    </div>\
-                    <div class="col-4 col-6-medium col-12-small">\
-                        <section class="box style3">\
-                            <span class="image profileIcon"><img src="images/tuico.png" /></span><br>\
-                            <h3>Kitu Tuico</h3>\
-                            <p>Place self BIO here. Here is a practical framework you can leverage to introduce yourself with confidence in any context, online or in-person: Present, past, and future.</p>\
-                        </section>\
-                    </div>\
+            <div class="row" >\
+                <div class="col-2 col-2-large col-2-medium">\
+                    <span class="image profileIcon"><img src="images/logo.jpg" alt="" /></span>\
+                </div>\
+                <div class="col-10 col-10-large col-10-medium">\
+                    <h2 align="left" style="font-size:2.5em">Group Name.</h2>\
+                    <p  align="left">Place INTRO here. And this is our project, Project Title, <em>a short explanation of the project objectives</em>. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>\
                 </div>\
             </div>\
-\
-\
-        </header>\
-        <div class="row">\
-            <div class="col-12">\
-            <a href="#team" class="button large scrolly" style="width:22em">Contact us</a>\
-            </div>\
-            <div class="col-12">\
-                <hr />\
-                <h3>Find me on ...</h3>\
-                <ul class="social">\
-                    <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>\
-                    <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>\
-                    <li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>\
-                    <li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>\
-                    <li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>\
-                    <li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>\
-                    <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>\
-                    <!--\
-                    <li><a href="#" class="icon solid fa-rss"><span>RSS</span></a></li>\
-                    <li><a href="#" class="icon brands fa-instagram"><span>Instagram</span></a></li>\
-                    <li><a href="#" class="icon brands fa-foursquare"><span>Foursquare</span></a></li>\
-                    <li><a href="#" class="icon brands fa-skype"><span>Skype</span></a></li>\
-                    <li><a href="#" class="icon brands fa-soundcloud"><span>Soundcloud</span></a></li>\
-                    <li><a href="#" class="icon brands fa-youtube"><span>YouTube</span></a></li>\
-                    <li><a href="#" class="icon brands fa-blogger"><span>Blogger</span></a></li>\
-                    <li><a href="#" class="icon brands fa-flickr"><span>Flickr</span></a></li>\
-                    <li><a href="#" class="icon brands fa-vimeo"><span>Vimeo</span></a></li>\
-                    -->\
+        <div class="row" align="right">\
+            <div class="col-8" align="left">\
+                <ul id="copyright" style="padding:2.5em 0px 0px 0px">\
+                    <li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>\
                 </ul>\
-                <hr />\
+            </div>\
+            <div class="col-4">\
+                <a href="#team" class="button medium">Contact us</a>\
             </div>\
         </div>\
-        <footer>\
-            <ul id="copyright">\
-                <li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>\
-            </ul>\
-        </footer>\
     </div>\
 </article>\
 ');

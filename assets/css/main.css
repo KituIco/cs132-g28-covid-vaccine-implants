@@ -1727,6 +1727,15 @@ input, select, textarea {
 			letter-spacing: -0.025em;
 		}
 
+		input[type="button"].medium,
+		input[type="submit"].medium,
+		input[type="reset"].medium,
+		button.medium,
+		.button.medium {
+			font-size: 1em;
+			letter-spacing: -0.025em;
+		}
+
 		input[type="button"].alt,
 		input[type="submit"].alt,
 		input[type="reset"].alt,
