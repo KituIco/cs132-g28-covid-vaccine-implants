@@ -34,9 +34,7 @@ document.write('\
         </header>\
         <div class="row">\
             <div class="col-12">\
-                <form action="mailto:kvtuico@up.edu.ph,another@gmail.com" method="post" enctype="text/plain">\
-                    <input style="width:16em;" type="submit" value="Contact Us"/>\
-                </form>\
+            <a href="#team" class="button large scrolly" style="width:22em">Contact us</a>\
             </div>\
             <div class="col-12">\
                 <hr />\
