@@ -10,21 +10,21 @@ document.write('\
                         <section class="box style3">\
                             <span class="image profileIcon"><img src="images/logo.jpg" /></span><br>\
                             <h3>Lonnie Gonzales</h3>\
-                            <p>Place self intro here. Here is a practical framework you can leverage to introduce yourself with confidence in any context, online or in-person: Present, past, and future.</p>\
+                            <p>Place self BIO here. Here is a practical framework you can leverage to introduce yourself with confidence in any context, online or in-person: Present, past, and future.</p>\
                         </section>\
                     </div>\
                     <div class="col-4 col-6-medium col-12-small">\
                         <section class="box style3">\
                             <span class="image profileIcon"><img src="images/logo.jpg" /></span><br>\
                             <h3>Miguel Pardiñas</h3> \
-                            <p>Place self intro here. Here is a practical framework you can leverage to introduce yourself with confidence in any context, online or in-person: Present, past, and future.</p>\
+                            <p>Place self BIO here. Here is a practical framework you can leverage to introduce yourself with confidence in any context, online or in-person: Present, past, and future.</p>\
                         </section>\
                     </div>\
                     <div class="col-4 col-6-medium col-12-small">\
                         <section class="box style3">\
                             <span class="image profileIcon"><img src="images/tuico.png" /></span><br>\
                             <h3>Kitu Tuico</h3>\
-                            <p>Place self intro here. Here is a practical framework you can leverage to introduce yourself with confidence in any context, online or in-person: Present, past, and future.</p>\
+                            <p>Place self BIO here. Here is a practical framework you can leverage to introduce yourself with confidence in any context, online or in-person: Present, past, and future.</p>\
                         </section>\
                     </div>\
                 </div>\
