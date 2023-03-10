@@ -6,8 +6,8 @@ document.write('\
                     <span class="image profileIcon"><img src="images/logo.jpg" alt="" /></span>\
                 </div>\
                 <div class="col-10 col-10-large col-10-medium">\
-                    <h2 align="left" style="font-size:2.5em">Group Name.</h2>\
-                    <p  align="left">Place INTRO here. And this is our project, Project Title, <em>a short explanation of the project objectives</em>. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>\
+                    <h2 align="left" style="font-size:2.5em">GraviTeam</h2>\
+                    <p  align="left">Welcome to our project, Covid Implants!?, <em>which is a study on misinformation about Covid-19 in the Twitter space</em>. The team is composed of BS Computer Science students who are undertaking CS 132 (Introduction to Data Science) under Asst. Prof. Paul Regonia at University of the Philippines Diliman.</p>\
                 </div>\
             </div>\
         <div class="row" align="right">\
@@ -17,7 +17,7 @@ document.write('\
                 </ul>\
             </div>\
             <div class="col-4">\
-                <a href="#team" class="button medium">Contact us</a>\
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSc4if5dmm8-tRrnMYvaMwDBjlL42YxTOqLUpeZQh4yR35cNQQ/viewform" class="button medium">Contact us</a>\
             </div>\
         </div>\
     </div>\
