@@ -30,78 +30,44 @@
 			<div class="container">
 				<header>
 					<h2>We scraped and filtered tweets as our data.</h2>
-					<p style="font-size:20px; text-align: justify;">For the data collection section of this project, the team gathered tweets containing misinformation and disinformation about the topic, <i>COVID-19 vaccines contain microchip, magnetic objects, and other substances</i>. The dataset for this initiative can be <a href="https://docs.google.com/spreadsheets/d/1jzNEJWQMvfK6aJeG28JSXecrLZfjeFOCYp-gtW0Q7LQ/edit#gid=1456408654">accessed here</a>. To discuss how the data collection process went through, we answer the following questions:</p>
+					<p style="text-align: justify;">For the <b>data collection</b> section of this project, the team gathered tweets containing misinformation and disinformation about the topic, <i>COVID-19 vaccines contain microchip, magnetic objects, and other substances</i>. The dataset for this initiative can be <a href="https://docs.google.com/spreadsheets/d/1jzNEJWQMvfK6aJeG28JSXecrLZfjeFOCYp-gtW0Q7LQ/edit#gid=1456408654">accessed here</a>. To discuss how the data collection process went through, we answer the following questions:</p>
 				</header>
 
-				<div>
-					<h3 style="font-size:24px; text-align: left;">How did you collect your data?</h3>
-					<p style="font-size:20px; text-align: justify;">Answer</p>
+				<div class="body">
+					<h3 style="text-align: left;">How did you collect your data?</h3>
+					<p style="text-align: justify;">There are two different methods employed to gather tweets from Twitter. The first method uses the <b>advanced search feature</b> of Twitter where tweets are searched based on keywords and post date. The collector then manually collates all necessary features of chosen tweets into the spreadsheet. The second method uses <b>scraping script</b> implemented on python. Similarly, this tool gathers tweets with matching keywords and date while creating a csv file contaning the tweets and their features. The collectors filter the desired tweets manually before transferring it to the sheet.</p>
 
-					<h3 style="font-size:24px; text-align: left;">How did you collect your data?</h3>
-					<p style="font-size:20px; text-align: justify;">Answer</p>
+					<h3 style="text-align: left;">When did you collect you data?</h3>
+					<p style="text-align: justify;">Before collecting the data, some sample tweets were obtained during the last week of February 2023 and the first week of March 2023, which is necessary to gauge if the topic is feasible. After having the topic proposal approved by our professor, we collected most of the data from <b>28 March 2023</b> to <b>18 April 2023</b>. After the data collection, the tweets were subjected to review by different reviewers to check if the data is correct, complete, clean, and unique.</p>
 
-					<h3 style="font-size:24px; text-align: left;">How did you collect your data?</h3>
-					<p style="font-size:20px; text-align: justify;">Answer</p>
+					<h3 style="text-align: left;">What's your selection criteria for collecting data?</h3>
+					<p style="text-align: justify;">As mentioned earlier, the tools used by the team filters the tweets based on <b>keywords</b> and <b>timeframe</b>. Since the pandemic started on March 2020, the timeframe considered started on that date. These tools serves as the preliminary filter to ensure that the tweets are in line with the topic. Then, the team manually checks all these filtered tweets whether they contain disinfo or misinfo, and are related to the topic. Before placing the filtered tweets into the spreadsheet, the collectors check if the tweets are <b>fact-checkable</b>, <b>relevant</b>, and <b>verifiable</b> using reliable sources.</p>
 
-					<h3 style="font-size:24px; text-align: left;">How did you collect your data?</h3>
-					<p style="font-size:20px; text-align: justify;">Answer</p>
+					<h3 style="text-align: left;">How many samples did you collect?</h3>
+					<p style="text-align: justify;">The team collected a total of <b>151 samples</b> where 73 tweets are labelled Filipino and 78 tweets are labelled as Foreign. To clarify, Filipino tweets are contained in threads that use Filipino language, while Foreign tweets are contained in threads that did not use Filipino language.</p>
 
-					<h3 style="font-size:24px; text-align: left;">How did you collect your data?</h3>
-					<p style="font-size:20px; text-align: justify;">Answer</p>
-
-					<h3 style="font-size:24px; text-align: left;">How did you collect your data?</h3>
-					<p style="font-size:20px; text-align: justify;">Answer</p>
+					<h3 style="text-align: left;">What are the data features? Describe each one.</h3>
+					<p style="text-align: justify; margin-bottom: 0;">The data features of the <i>Clean Data</i> sheet in the dataset are as follows: </p>
+					<ul class="container">
+						<li><p style="text-align: left; margin-bottom: 0;"><b>ID</b> - has format GG-ID, where GG corresponds to the group collector and ID corresponds to the assigned identifier</p></li>
+						<li><p style="text-align: left; margin-bottom: 0;"><b>Timestamp</b> - date and time this tweet was collected in Philippine Standard Time of format <i>DD/MM/YY HH:MM:SS</i></p></li>
+						<li><p style="text-align: left; margin-bottom: 0;"><b>Tweet URL</b> - complete URL of the tweet. When clicked, it automatically redirects to the original tweet</p></li>
+						<li><p style="text-align: left; margin-bottom: 0;"><b>Group</b> - the assigned group number of the team in which the collector of this tweet is part of</p></li>
+						<li><p style="text-align: left; margin-bottom: 0;"><b>Keywords</b> - the keywords fed onto the advanced search and scraping tool used when searching for this tweet</p></li>
+						<li><p style="text-align: left; margin-bottom: 0;"><b>Account Handle</b> - the account handle of the user that tweeted this tweet</p></li>
+						<li><p style="text-align: left; margin-bottom: 0;"><b>Account Name</b> - the account name of the user that tweeted this tweet</p></li>
+						<li><p style="text-align: left; margin-bottom: 0;"><b>Account Type</b> - the account type of the user which can either be identified, anonymous, or media</p></li>
+						<li><p style="text-align: left; margin-bottom: 0;"><b>Tweet</b> - the tweet itself in raw text format with an optional alt-text if the tweet contains media</p></li>
+						<li><p style="text-align: left; margin-bottom: 0;"><b>Tweet Translated</b> - the English translation of the raw text format of this tweet</p></li>
+						<li><p style="text-align: left; margin-bottom: 0;"><b>Tweet Type</b> - the tweet's label; can be one or more of the following: text, image, video, URL, reply</p></li>
+						<li><p style="text-align: left; margin-bottom: 0;"><b>Date Posted</b> - ate and time this tweet was posted in Philippine Standard Time of format <i>DD/MM/YY HH:MM</i></p></li>
+						<li><p style="text-align: left; margin-bottom: 0;"><b>Content Type</b> - the content's label which can either be emotional, rational, or transactional</p></li>
+						<li><p style="text-align: left; margin-bottom: 0;"><b>Reasoning</b> - a brief explanation as to why the tweet is misinformation or disinformation</p></li>
+						<li><p style="text-align: left; margin-bottom: 0;"><b>Thread/Tweet Language</b> - the thread's lable which can either be Filipino or Foreign depending on the language</p></li>
+					</ul>
 
 				</div>
 
-
-				<!-- <div class="row">
-					<div class="col-4 col-6-medium col-12-small">
-						<article class="box style2">
-							<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-							<h3><a href="#">Topic</a></h3>
-							<p>Ornare nulla proin odio consequat.</p>
-						</article>
-					</div>
-					<div class="col-4 col-6-medium col-12-small">
-						<article class="box style2">
-							<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-							<h3><a href="#">Keywords</a></h3>
-							<p>Ornare nulla proin odio consequat.</p>
-						</article>
-					</div>
-					<div class="col-4 col-6-medium col-12-small">
-						<article class="box style2">
-							<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-							<h3><a href="#">Tools</a></h3>
-							<p>Ornare nulla proin odio consequat.</p>
-						</article>
-					</div>
-					<div class="col-4 col-6-medium col-12-small">
-						<article class="box style2">
-							<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
-							<h3><a href="#">Tempus dolore</a></h3>
-							<p>Ornare nulla proin odio consequat.</p>
-						</article>
-					</div>
-					<div class="col-4 col-6-medium col-12-small">
-						<article class="box style2">
-							<a href="#" class="image featured"><img src="images/pic05.jpg" alt="" /></a>
-							<h3><a href="#">Feugiat aliquam</a></h3>
-							<p>Ornare nulla proin odio consequat.</p>
-						</article>
-					</div>
-					<div class="col-4 col-6-medium col-12-small">
-						<article class="box style2">
-							<a href="#" class="image featured"><img src="images/pic06.jpg" alt="" /></a>
-							<h3><a href="#">Sed amet ornare</a></h3>
-							<p>Ornare nulla proin odio consequat.</p>
-						</article>
-					</div>
-				</div>
-				<footer>
-					<p>Lorem ipsum dolor sit sapien vestibulum ipsum primis?</p>
-				</footer> -->
 			</div>
 		</article>
 
