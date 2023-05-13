@@ -35,7 +35,7 @@
 				</header>
 			</div>
 
-			<div class="container" style="margin-bottom: 7em;">
+			<div class="container" style="margin-bottom: 5em;">
 				<header>
 					<h2 style="text-align: justify;">Preprocessing for Clean Data</h2>
 					<p style="text-align: justify;">In the preprocessing stage, we have performed different techniques to ensure that the project would involve only clean data. You may refer to this <a href="https://github.com/mspardinas/cs132-g28-covid-vaccine-implants/blob/main/misc/Data-Exploration-Encoding.ipynb">Preprocessing and Data Encoding document</a> to see how we handled the data.</p>
@@ -47,12 +47,12 @@
 
 					<h3 style="text-align: left;">Handling Outliers</h3>
 					<div class="row">
-						<div class="col-8 col-12-medium col-12-small">
+						<div class="col-8 col-12-medium col-12-small" style="padding-bottom:0;">
 							<img src="images/raw-CSV-scraped-tweets.png" alt="Sample raw CSV file of Scraped Tweets" style=" width: 100%; object-fit:contain; "/>
-							<p style="font-size: 0.8em;">Figure 1: Screenshot of a generated CSV file during Tweet Scraping</p>
+							<p style="font-size: 0.8em; margin-bottom:0;" >Figure 1: Screenshot of a generated CSV file during Tweet Scraping</p>
 						</div>
 						<div class="col-4 col-12-medium col-12-small">
-							<p style="text-align: justify; ">The screenshot of a raw CSV file of scraped tweets is shown in Figure 1. In particular, the scraping tool generated this file on 28th March 2023 using the keywords "bakuna" and "laman". These <b>scraped tweets</b>, however, contained multiple outliers that is not suitable for the topic. The team <b>manually removed</b> these outliers so that the dataset would only involve relevant and fact-checkable tweets. There are other checks and criteria that the collectors observed that are discussed thoroughly in the <a href="data-collection.html">Data Collection</a> section.</p>
+							<p style="text-align: justify; ">The screenshot of a raw CSV file of scraped tweets is shown in Figure 1. In particular, the scraping tool generated this file on 28th March 2023 using keywords "bakuna" and "laman". These <b>scraped tweets</b>, however, has gathered multiple outliers that is not suitable for the topic. Hence, the team <b>manually removed</b> the outliers so that the dataset would only involve relevant and fact-checkable tweets. There are other checks and criteria that the collectors observed when handling outliers. The general discussion of scraping and filtering of tweets are explored thoroughly in the <a href="data-collection.html">Data Collection</a> section of this portfolio.</p>
 						</div>
 					</div>
 					
@@ -60,12 +60,20 @@
 					<h3 style="text-align: left;">Ensuring Formatting Consistency</h3>
 					<p style="text-align: justify;">In the document, consistency in formatting of date features and categorical features were observed. For the <span style="background-color: #FFFF00">Timestamp</span> and the <span style="background-color: #FFFF00">Date posted</span> features, we ensured that the data type is datetime. By default, the <b>format of datetime</b> in Pandas is YYYY-MM-DD HH:MM:SS. The team also observed consistency in labels of categorical features. For <span style="background-color: #FFFF00">Account type</span>, we ensured that the values can only be <b>Anonymous</b>, <b>Identified</b>, or <b>Media</b> and are case sensitive. For <span style="background-color: #FFFF00">Content type</span>, values should be <b>Emotional</b>, <b>Rational</b>, or <b>Transactional</b> and are case sensitive. For <span style="background-color: #FFFF00">Language</span>, values are guaranteed to be <b>Filipino</b>, or <b>Foreign</b> and are case sensitive</p>
 
-					<h3 style="text-align: left;">Translating Tweets (Standardization)</h3>
-					<p style="text-align: justify;">Content</p>
+					<h3 style="text-align: left;">Translating Tweets - Standardization</h3>
+					<div class="row">
+						<div class="col-6 col-12-medium col-12-small">
+							<p style="text-align: justify;">The screenshot of the first eight Tweets and their Translations is shown in Figure 2. For translating tweets, the team used <b>Google translator</b> to obtain raw English translation of all Filipino tweets. Then, we manually checked all results and adjusted some translations for better accuracy. For Foreign tweets, the contents in the <span style="background-color: #FFFF00">Tweet</span> column were copied into the <span style="background-color: #FFFF00">Tweet translation</span> column since all Foreign tweets gathered are already in English. Translating tweets are considered <b>standardization</b> since internal consistency in terms language are insured. This process is needed for the <b>Natural Language Processing</b> section. The team also performed other normalization and standardization techniques in the Time Series Analysis section.</p>
+						</div>
+						<div class="col-6 col-12-medium col-12-small" style="padding-top:0;">
+							<img src="images/tweets-translated.png" alt="First 8 Tweets and their Translation" style=" width: 95%; object-fit:contain; "/>
+							<p style="font-size: 0.8em;">Figure 2: First 8 Tweets and their Translations in the Dataset</p>
+						</div>
+					</div>
 				</div>
 			</div>
 
-			<div class="container" style="margin-bottom: 7em;">
+			<div class="container" style="margin-bottom: 5em;">
 				<header>
 					<h2 style="text-align: justify;">Time Series Analysis</h2>
 					<p style="text-align: justify;">time series analysis content</p>
@@ -78,12 +86,12 @@
 					<h3 style="text-align: left;">Binning</h3>
 					<p style="text-align: justify;">Content</p>
 
-					<h3 style="text-align: left;">Line Graph (Time Series)</h3>
+					<h3 style="text-align: left;">Line Graph - Time Series</h3>
 					<p style="text-align: justify;">Content</p>
 				</div>
 			</div>
 
-			<div class="container" style="margin-bottom: 7em;">
+			<div class="container" style="margin-bottom: 5em;">
 				<header>
 					<h2 style="text-align: justify;">Natural Language Processing</h2>
 					<p style="text-align: justify;">nlp content</p>
@@ -99,7 +107,7 @@
 					<h3 style="text-align: left;">Stemming and Lemmatization</h3>
 					<p style="text-align: justify;">Content</p>
 
-					<h3 style="text-align: left;">Bar Graph (Feature Comparison)</h3>
+					<h3 style="text-align: left;">Bar Graph - Feature Comparison</h3>
 					<p style="text-align: justify;">Content</p>
 				</div>
 			</div>
@@ -107,15 +115,34 @@
 			<div class="container" style="margin-bottom: 5em;">
 				<header>
 					<h2 style="text-align: justify;">Categorical Data Encoding</h2>
-					<p style="text-align: justify;">content</p>
+					<p style="text-align: justify;">For categorical data encoding, we used one hot encoding technique to convert categorical data into <b>numerical values</b>. The team needed to transform these features to easily observe whether there is a difference between the content type of Philippine-based and Foreign-based tweets. <b>One Hot Encoding</b> is the chosen method since these features are nominal which lack inherent order. You may refer to the <a href="https://github.com/mspardinas/cs132-g28-covid-vaccine-implants/blob/main/misc/Data-Exploration-Encoding.ipynb">Preprocessing and Data Encoding document</a> for this section.</p>
 				</header>
 
 				<div class="container">
 					<h3 style="text-align: left;">One Hot Encoding</h3>
-					<p style="text-align: justify;">Content</p>
+					<img src="images/one-hot-encoded.png" alt="One Hot Encoded Categorical Features" style=" width: 100%; object-fit:contain;"/>
+					<p style="font-size: 0.8em; margin-bottom: 1em;">Figure N: (A) One Hot Encoded Account type, (B) One Hot Encoded Content type, (C) One Hot Encoded Language feature </p>
+					<p style="text-align: justify; ">Shown in Figure N are the one hot encoded features. For each category of a feature, a new <b>binary feature</b> is created. The first feature we have implemented one hot encoding is for the <span style="background-color: #FFFF00">Account type</span>. Figure N-A shows the encoded table for these labels. Another feature that needs data encoding is <span style="background-color: #FFFF00">Content type</span>. Figure N-B shows the encoded table for these categories. Lastly, we also employed encoding on <span style="background-color: #FFFF00">Thread/Tweet Language</span>. Figure N-C shows the encoded table for this feature. Note that <b>0</b> represents the <b>absence</b> and <b>1</b> represents the <b>presence</b> of that categorical value.</p>
+					
 
-					<h3 style="text-align: left;">Heat Map (Feature Correlation)</h3>
-					<p style="text-align: justify;">Content</p>
+					<h3 style="text-align: left;">Heat Map - Feature Correlation</h3>
+					<div class="row" style="flex-direction: row-reverse;">
+						<div class="col-8 col-12-medium col-12-small">
+							<img src="images/heat-map.png" alt="Content type and Language feature Correlation" style=" width: 90%; object-fit:contain; "/>
+							<p style="font-size: 0.8em; margin-bottom: -1em">Figure (N+1): Content type and Language feature Correlation</p>
+						</div>
+						<div class="col-4 col-12-medium col-12-small">
+							<p style="text-align: justify; margin-bottom: 1em;">In the third research question of the project, we are looking for the <b>difference</b> in terms of content type between Filipino and Foreign misinformed tweets about COVID-19 vaccine implants. To explore this matter, the team visualized the correlation of the content type categories and the language feature categories using the <b>Heat Map - Feature Correlation</b> as shown in Figure (N+1). The visualization is achieved by merging the encoded tables of the <span style="background-color: #FFFF00">Content type</span> and the <span style="background-color: #FFFF00">Thread/Tweet Language</span> features. Then, we let Pandas tool process the merged table and create the plot.</p>
+							<p style="text-align: justify; margin-bottom: 0.5em;">From the Heat Map - Feature Correlation, the team arrived with the following <b>observations</b> to help understand our dataset:</p>
+						</div>
+					</div>
+					<ul class="container" style="font-size: 0.95em;">
+						<li><p style="text-align: left; margin-bottom: 0;">there is a <b>moderate positive</b> correlation between <span style="background-color: #FFFF00">Emotional</span> tweets and <span style="background-color: #FFFF00">Filipino</span> tweets, with a value of 0.34</p></li>
+						<li><p style="text-align: left; margin-bottom: 0;">there is a <b>moderate positive</b> correlation between <span style="background-color: #FFFF00">Rational</span> tweets and <span style="background-color: #FFFF00">Foreign</span> tweets, with a value of 0.33</p></li>
+						<li><p style="text-align: left; margin-bottom: 0;">there is a <b>moderate negative</b> correlation between <span style="background-color: #FFFF00">Emotional</span> tweets and <span style="background-color: #FFFF00">Foreign</span> tweets, with a value of -0.34</p></li>
+						<li><p style="text-align: left; margin-bottom: 0;">there is a <b>moderate negative</b> correlation between <span style="background-color: #FFFF00">Rational</span> tweets and <span style="background-color: #FFFF00">Filipino</span> tweets, with a value of -0.33</p></li>
+						<li><p style="text-align: left; margin-bottom: 0;">the <span style="background-color: #FFFF00">Transactional</span> tweets have <b>weak linear relationships</b> among all other categories</p></li>
+					</ul>
 				</div>
 			</div>
 
