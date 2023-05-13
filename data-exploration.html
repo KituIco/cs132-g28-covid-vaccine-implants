@@ -27,33 +27,45 @@
 
 		<!-- Data -->
 		<article id="data-exploration" class="wrapper style3">
-			<div class="container" style="margin-bottom: 5em;">
+			<div class="container" style="margin-bottom: 7em;">
 				<header>
 					<h2>Here's our preprocessed data and its visualization.</h2>
-					<p style="text-align: justify; margin-bottom: 20px;">We have divided the data exploration stage into 4 subsections, namely Preprocessing for Clean Data, Time Series Analysis, Natural Language Processing, and Categorical Data Encoding. <b>Preprocessing for Clean Data</b> guarantees that the dataset handles clean data by processing the sheet to only contain correct, complete, and unique data.</p> 
+					<p style="text-align: justify; margin-bottom: 1em; margin-top: 2em;">We have divided the data exploration stage into 4 subsections, namely Preprocessing for Clean Data, Time Series Analysis, Natural Language Processing, and Categorical Data Encoding. <b>Preprocessing for Clean Data</b> guarantees that the dataset handles clean data by processing the sheet to only contain correct, complete, and unique data.</p> 
 					<p style="text-align: justify;"><b>Time Series Analysis</b> is a useful approach for our first research question. This aids in analyzing what events triggered the spread of harmful tweets. For the second research question, <b>Natural Language Processing</b> is necessary in performing topic analysis and in identifying the most frequently mentioned implants. Finally, content type and thread language features are required to be processed via <b>Categorical Data Encoding</b> as preparation for answering our third research question.</p>
 				</header>
 			</div>
 
-			<div class="container" style="margin-bottom: 5em;">
+			<div class="container" style="margin-bottom: 7em;">
 				<header>
 					<h2 style="text-align: justify;">Preprocessing for Clean Data</h2>
-					<p style="text-align: justify;">preprocessing for clean data content</p>
+					<p style="text-align: justify;">In the preprocessing stage, we have performed different techniques to ensure that the project would involve only clean data. You may refer to this <a href="https://github.com/mspardinas/cs132-g28-covid-vaccine-implants/blob/main/misc/Data-Exploration-Encoding.ipynb">Preprocessing and Data Encoding document</a> to see how we handled the data.</p>
 				</header>
 
 				<div class="container">
 					<h3 style="text-align: left;">Handling Missing Values</h3>
-					<p style="text-align: justify;">Content</p>
+					<p style="text-align: justify;">Initially, the dataset had 35 features which included columns with missing values and dirty values. Upon checking for missing values, the features with missing values are Account Bio, Location, Screenshot, etc. All these features are dropped along with the some features deemed unnecessary for the project. The <b>15 retained features</b> with no missing values are <span style="background-color: #FFFF00">['ID', 'Timestamp', 'Tweet URL', 'Group', 'Keywords', 'Account handle', 'Account name', 'Account bio', 'Account type', 'Tweet', 'Tweet Translated', 'Tweet Type', 'Date posted', 'Content type', 'Reasoning', 'Thread/Tweet Language']</span>.</p>
 
 					<h3 style="text-align: left;">Handling Outliers</h3>
-					<p style="text-align: justify;">Content</p>
+					<div class="row">
+						<div class="col-8 col-12-medium col-12-small">
+							<img src="images/raw-CSV-scraped-tweets.png" alt="Sample raw CSV file of Scraped Tweets" style=" width: 100%; object-fit:contain; "/>
+							<p style="font-size: 0.8em;">Figure 1: Screenshot of a generated CSV file during Tweet Scraping</p>
+						</div>
+						<div class="col-4 col-12-medium col-12-small">
+							<p style="text-align: justify; ">The screenshot of a raw CSV file of scraped tweets is shown in Figure 1. In particular, the scraping tool generated this file on 28th March 2023 using the keywords "bakuna" and "laman". These <b>scraped tweets</b>, however, contained multiple outliers that is not suitable for the topic. The team <b>manually removed</b> these outliers so that the dataset would only involve relevant and fact-checkable tweets. There are other checks and criteria that the collectors observed that are discussed thoroughly in the <a href="data-collection.html">Data Collection</a> section.</p>
+						</div>
+					</div>
+					
 
 					<h3 style="text-align: left;">Ensuring Formatting Consistency</h3>
+					<p style="text-align: justify;">In the document, consistency in formatting of date features and categorical features were observed. For the <span style="background-color: #FFFF00">Timestamp</span> and the <span style="background-color: #FFFF00">Date posted</span> features, we ensured that the data type is datetime. By default, the <b>format of datetime</b> in Pandas is YYYY-MM-DD HH:MM:SS. The team also observed consistency in labels of categorical features. For <span style="background-color: #FFFF00">Account type</span>, we ensured that the values can only be <b>Anonymous</b>, <b>Identified</b>, or <b>Media</b> and are case sensitive. For <span style="background-color: #FFFF00">Content type</span>, values should be <b>Emotional</b>, <b>Rational</b>, or <b>Transactional</b> and are case sensitive. For <span style="background-color: #FFFF00">Language</span>, values are guaranteed to be <b>Filipino</b>, or <b>Foreign</b> and are case sensitive</p>
+
+					<h3 style="text-align: left;">Translating Tweets (Standardization)</h3>
 					<p style="text-align: justify;">Content</p>
 				</div>
 			</div>
 
-			<div class="container" style="margin-bottom: 5em;">
+			<div class="container" style="margin-bottom: 7em;">
 				<header>
 					<h2 style="text-align: justify;">Time Series Analysis</h2>
 					<p style="text-align: justify;">time series analysis content</p>
@@ -71,16 +83,13 @@
 				</div>
 			</div>
 
-			<div class="container" style="margin-bottom: 5em;">
+			<div class="container" style="margin-bottom: 7em;">
 				<header>
 					<h2 style="text-align: justify;">Natural Language Processing</h2>
 					<p style="text-align: justify;">nlp content</p>
 				</header>
 
 				<div class="container">
-					<h3 style="text-align: left;">Translating Tweets (Standardization)</h3>
-					<p style="text-align: justify;">Content</p>
-					
 					<h3 style="text-align: left;">Tokenization and Lower Casing</h3>
 					<p style="text-align: justify;">Content</p>
 
