@@ -49,7 +49,7 @@
 					<div class="row">
 						<div class="col-8 col-12-medium col-12-small" style="padding-bottom:0;">
 							<img src="images/raw-CSV-scraped-tweets.png" alt="Sample raw CSV file of Scraped Tweets" style=" width: 100%; object-fit:contain; "/>
-							<p style="font-size: 0.8em; margin-bottom:0;" >Figure 1: Screenshot of a generated CSV file during Tweet Scraping</p>
+							<p style="font-size: 0.8em; margin-bottom:0; line-height:130%;" >Figure 1: Screenshot of a generated CSV file during Tweet Scraping</p>
 						</div>
 						<div class="col-4 col-12-medium col-12-small">
 							<p style="text-align: justify; ">The screenshot of a raw CSV file of scraped tweets is shown in Figure 1. In particular, the scraping tool generated this file on 28th March 2023 using keywords "bakuna" and "laman". These <b>scraped tweets</b>, however, has gathered multiple outliers that is not suitable for the topic. Hence, the team <b>manually removed</b> the outliers so that the dataset would only involve relevant and fact-checkable tweets. There are other checks and criteria that the collectors observed when handling outliers. The general discussion of scraping and filtering of tweets are explored thoroughly in the <a href="data-collection.html">Data Collection</a> section of this portfolio.</p>
@@ -67,7 +67,7 @@
 						</div>
 						<div class="col-6 col-12-medium col-12-small" style="padding-top:0;">
 							<img src="images/tweets-translated.png" alt="First 8 Tweets and their Translation" style=" width: 95%; object-fit:contain; "/>
-							<p style="font-size: 0.8em;">Figure 2: First 8 Tweets and their Translations in the Dataset</p>
+							<p style="font-size: 0.8em; line-height:130%;">Figure 2: First 8 Tweets and their Translations in the Dataset</p>
 						</div>
 					</div>
 				</div>
@@ -87,7 +87,7 @@
 					<div class="row">
 						<div class="col-6 col-12-medium col-12-small" style="padding-bottom:0;">
 							<img src="images/binning.png" alt="Semimonthly Binning of Time Series Data" style=" width: 100%; object-fit:contain; "/>
-							<p style="font-size: 0.8em; margin-bottom:0;" >Figure 3: Semimonthly Binning of Time Series Data</p>
+							<p style="font-size: 0.8em; margin-bottom:0; line-height:130%;" >Figure 3: Semimonthly Binning of Time Series Data</p>
 						</div>
 						<div class="col-6 col-12-medium col-12-small">
 							<p style="text-align: justify; ">To organize our time series data, the group performed data binning on the newly generated features. The binning technique employed is via <b>grouping</b>. The features are grouped as sum of <span style="background-color: #FFFF00">Count</span>, <span style="background-color: #FFFF00">Filipino_Count</span>, or <span style="background-color: #FFFF00">Foreign_Count</span> corresponding to its columns in a semimonthly manner as shown in Figure 3. For further details about the binned data, it has 71 rows which implies having <b>71 semimonthly timeranges</b> obtained from 15 January 2021 to 31 December 2023.</p>
@@ -98,7 +98,7 @@
 					<div class="row">
 						<div class="col-6 col-12-medium col-12-small" style="padding-bottom:0;">
 							<img src="images/interpolation.png" alt="Interpolation of the Time Series Data" style=" width: 100%; object-fit:contain; "/>
-							<p style="font-size: 0.8em;">Figure 4: Interpolation of the Time Series Data (Hourly)</p>
+							<p style="font-size: 0.8em; line-height:130%;">Figure 4: Interpolation of the Time Series Data (Hourly)</p>
 						</div>
 						<div class="col-6 col-12-medium col-12-small">
 							<p style="text-align: justify;">Since our time-series data has in semimonthly binning, resampling the data by decreasing the period length would result to missing values. The team resampled the data by adjusting the period length from semimonthly <b></b>to hourly</b>. We also have increased the rows from 71 <b>to 25561</b>. To fill in the missing values on the newly resampled table, we performed <b>cubic spline interpolation with K=3</b>. Shown in Figure 4 is a table of the interpolated time series data of of <span style="background-color: #FFFF00">Count</span>, <span style="background-color: #FFFF00">Filipino_Count</span>, and <span style="background-color: #FFFF00">Foreign_Count</span>. This interpolation is an approximate of the frequencies of misinfo/disinfo Tweets being posted every hour from 15 January 2021 to 31 December 2023.</p>
@@ -109,7 +109,7 @@
 					<h3 style="text-align: left;">Line Graph - Time Series</h3>
 					<p style="text-align: justify; margin-bottom: 1em;">To visualize our binned data and interpolated data, <b>line graphs</b> were generated to display the differences among <span style="background-color: #FFFF00">Count</span>, <span style="background-color: #FFFF00">Filipino_Count</span>, and <span style="background-color: #FFFF00">Foreign_Count</span> features accross time. The first line graph displays the original time series data which records the tweet frequency in a <b>semimonthly</b> interval. The second line graph displays the interpolated data that records tweet frequency in an <b>hourly</b> manner.</p>
 					<img src="images/line-graphs.png" alt="Line Graphs" style=" width: 90%; object-fit:contain;"/>
-					<p style="font-size: 0.8em; margin-bottom: 1em;">Figure 5: (A) Line Graph of Time Series Data with Semimonthly Binning, and (B) Line Graph of Interpolated Time Series Data in Hours </p>
+					<p style="font-size: 0.8em; margin-bottom: 1em; line-height:130%;">Figure 5: (A) Line Graph of Time Series Data with Semimonthly Binning, and (B) Line Graph of Interpolated Time Series Data in Hours </p>
 
 					<p style="text-align: justify; margin-bottom: 0.5em;">Notice that the interpolated graph has smoother plot since we have provided estimated values that increased the number of data points. We can also observe the following trends for <span style="background-color: #FFFF00">Count</span>, <span style="background-color: #FFFF00">Filipino_Count</span>, and <span style="background-color: #FFFF00">Foreign_Count</span> features:</p>
 					<ul class="container" style="font-size: 0.90em;">
@@ -125,8 +125,7 @@
 					<p style="text-align: justify; margin-bottom: 1em;">Then, we <b>standardized</b> our time series data by obtaining the <b>Z-scores</b> of all data points. Upon standardizing the data, we could observe the following: (1) there are <b>two outliers</b> in <span style="background-color: #FFFF00">Count</span>; (2) there are <b>two outliers</b> in <span style="background-color: #FFFF00">Filipino_Count</span>; and (3) there are <b>three outliers</b> in <span style="background-color: #FFFF00">Foreign_Count</span>. Shown below in Figure 6 are the visualizations of our standardized data to easily identify the outliers per feature.</p>
 
 					<img src="images/standardized.png" alt="Standardized Time Series Data" style=" width: 90%; object-fit:contain;"/>
-					<p style="font-size: 0.8em; margin-bottom: -0.9em;">Figure 6: (A) Distribution for Standardized Count Feature, (B) Distribution for Standardized Filpino_Count Feature Hours,</p>
-					<p style="font-size: 0.8em; margin-bottom: 1em;"> and (C) Distribution for Standardized Foreing_Count Feature </p>
+					<p style="font-size: 0.8em; margin-bottom: 1em; width: 63%; margin-left:auto; margin-right:auto; line-height:130%; min-width:300px;">Figure 6: (A) Distribution for Standardized Count Feature, (B) Distribution for Standardized Filpino_Count Feature, and (C) Distribution for Standardized Foreign_Count Feature</p>
 				</div>
 			</div>
 
@@ -160,7 +159,7 @@
 				<div class="container">
 					<h3 style="text-align: left;">One Hot Encoding</h3>
 					<img src="images/one-hot-encoded.png" alt="One Hot Encoded Categorical Features" style=" width: 100%; object-fit:contain;"/>
-					<p style="font-size: 0.8em; margin-bottom: 1em;">Figure N: (A) One Hot Encoded Account type, (B) One Hot Encoded Content type, and (C) One Hot Encoded Language feature </p>
+					<p style="font-size: 0.8em; margin-bottom: 1em; line-height:130%;">Figure N: (A) One Hot Encoded Account type, (B) One Hot Encoded Content type, and (C) One Hot Encoded Language feature </p>
 					<p style="text-align: justify; ">Shown in Figure N are the one hot encoded features. For each category of a feature, a new <b>binary feature</b> is created. The first feature we have implemented one hot encoding is for the <span style="background-color: #FFFF00">Account type</span>. Figure N-A shows the encoded table for these labels. Another feature that needs data encoding is <span style="background-color: #FFFF00">Content type</span>. Figure N-B shows the encoded table for these categories. Lastly, we also employed encoding on <span style="background-color: #FFFF00">Thread/Tweet Language</span>. Figure N-C shows the encoded table for this feature. Note that <b>0</b> represents the <b>absence</b> and <b>1</b> represents the <b>presence</b> of that categorical value.</p>
 					
 
@@ -168,7 +167,7 @@
 					<div class="row" style="flex-direction: row-reverse;">
 						<div class="col-8 col-12-medium col-12-small">
 							<img src="images/heat-map.png" alt="Content type and Language feature Correlation" style=" width: 90%; object-fit:contain; "/>
-							<p style="font-size: 0.8em; margin-bottom: -1em">Figure (N+1): Content type and Language feature Correlation</p>
+							<p style="font-size: 0.8em; margin-bottom: -1em; line-height:130%;">Figure (N+1): Content type and Language feature Correlation</p>
 						</div>
 						<div class="col-4 col-12-medium col-12-small">
 							<p style="text-align: justify; margin-bottom: 1em;">In the third research question of the project, we are looking for the <b>difference</b> in terms of content type between Filipino and Foreign misinformed tweets about COVID-19 vaccine implants. To explore this matter, the team visualized the correlation of the content type categories and the language feature categories using the <b>Heat Map - Feature Correlation</b> as shown in Figure (N+1). The visualization is achieved by merging the encoded tables of the <span style="background-color: #FFFF00">Content type</span> and the <span style="background-color: #FFFF00">Thread/Tweet Language</span> features. Then, we let Pandas tool process the merged table and create the plot.</p>
