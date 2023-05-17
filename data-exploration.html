@@ -132,21 +132,50 @@
 			<div class="container" style="margin-bottom: 5em;">
 				<header>
 					<h2 style="text-align: justify;">3 - Natural Language Processing</h2>
-					<p style="text-align: justify;">nlp content</p>
+					<p style="text-align: justify;">For Natural Language Processing (NLP), we based it off from the preprocessing techniques provided in this <a href ="https://colab.research.google.com/drive/1-h9ucS3Ly7Kz1rypksUISBC8i8dski5m?usp=sharing">Python Notebook, which makes use of the Natural Language Toolkit (NLTK). For our project, since our obtained data is in the form of text via user tweets, we first started off by cleaning tweets by removing emoticons/emojis and then converting all characters to lower case to remove distinction between words. This is also to ensure case-insensitive matching later on. Next, Tokenization is done to break down complex tweets and make our data more manageable/explorable. Stop words are also removed to eliminate commonly occurrings words (in English) to reduce noise and improve efficiency during analysis. Lastly, stemming and lemmatization is done to reduce each word to their base form and ensure it is a valid word. To represent our analysis for NLP, we opted to use a bar graph to represent the frequency of certain types of implants over our whole dataset.</p>
 				</header>
 
 				<div class="container">
-					<h3 style="text-align: left;">Tokenization and Lower Casing</h3>
-					<p style="text-align: justify;">Content</p>
+					<h3 style="text-align: left;">Cleaning</h3>
+					<p style="text-align: justify;">Firstly, each user's tweets is cleaned by removing emojis/emoticons, and handling certain special text faces. This is done by replacing every emoji and special text face in our dataset into a text or keyword representing it, such as transforming 🥴 into "woozy_face".</p>
+					
+					<img src="images/nlp-01-emoticons.png" alt="NLP Cleaning - Handling of Emoticons" style=" width: 90%; object-fit:contain;"/>
+					<p style="font-size: 0.8em; margin-bottom: 1em; width: 63%; margin-left:auto; margin-right:auto; line-height:130%; min-width:300px;">Figure 7: Handling emojis/emoticons and special text</p>
+					
+					<h3 style="text-align: left;">Lower Casing</h3>
+					<p style="text-align: justify;">Next, each character in every word in every tweet is lowercased. This is to ensure case-insensitive matching later on once we tally the frequency of each kind of implant or foreign substance a user mentions the COVID-19 vaccine has. Moreoever, punctuations are also removed.</p>
+					
+					<img src="images/nlp-02-lowercasing.png" alt="NLP Cleaning - Lowercasing and removing punctuations" style=" width: 90%; object-fit:contain;"/>
+					<p style="font-size: 0.8em; margin-bottom: 1em; width: 63%; margin-left:auto; margin-right:auto; line-height:130%; min-width:300px;">Figure 8: Lowercasing and punctuation removal</p>
 
-					<h3 style="text-align: left;">Stop Words Removal</h3>
-					<p style="text-align: justify;">Content</p>
+					<h3 style="text-align: left;">Tokenization and Stop Words Removal</h3>
+					<p style="text-align: justify;">Each tweet is then tokenized, and English stop words are removed. This is to remove commonly occurring words in a tweet, which further cleans our dataset by ensuring that only words which have weight or impact during analysis are kept. Through this, analysis is restricted to only meaningful and informative words that contribute to the overall context and understanding of our project.</p>
+					
+					<img src="images/nlp-03-token.png" alt="NLP Cleaning - Tokenization and stop words removal" style=" width: 90%; object-fit:contain;"/>
+					<p style="font-size: 0.8em; margin-bottom: 1em; width: 63%; margin-left:auto; margin-right:auto; line-height:130%; min-width:300px;">Figure 9: Tokenization and Stop Words removal</p>
 
 					<h3 style="text-align: left;">Stemming and Lemmatization</h3>
-					<p style="text-align: justify;">Content</p>
+					<p style="text-align: justify;">Stemming and lemmatization are also applied to improve keyword frequency analysis, which will be used later on once we generate our bar graph for feature comparison. Stemming helps by normalizing words, and lemmatization helps in producing meaningful base forms of each word. This also helps in reducing word or frequency noise by consolidating similar word variations into a single base form.</p>
+					
+					<img src="images/nlp-04-stemlemma.png" alt="Stemming and Lemmatization" style=" width: 90%; object-fit:contain;"/>
+					<p style="font-size: 0.8em; margin-bottom: 1em; width: 63%; margin-left:auto; margin-right:auto; line-height:130%; min-width:300px;">Figure 10: Stemming and Lemmatization</p>
 
 					<h3 style="text-align: left;">Bar Graph - Feature Comparison</h3>
-					<p style="text-align: justify;">Content</p>
+					<p style="text-align: justify;">Lastly, to gain some insight on our dataset, we opted to count the frequency of different kinds of implants or foreign substances users tweet the COVID-19 might have in their tweet. Also note that we opted to explore in analyzing our lemmatized dataset. We separated kinds of implants and foreign substances into five (5) kinds: Magnet, Microchip, Water, Toxin, and Others. Each category and their associated keywords are detailed below:</p>
+					
+					<ul class="container"  style="font-size: 0.90em;">
+						<li><p style="text-align: left; margin-bottom: 0;">Magnet: "magnet", "magnetized", "magnetic", "magnetizes", "spoon", "coin", "fridge", "refrigerator", "shock", "electric", "electrical", "metal"</p></li>
+						<li><p style="text-align: left; margin-bottom: 0;">Microchip: "microchip", "micro", "chip", "simcard", "sim", "card", "5g", "track", "tracking", "bluetooth"</p></li>
+						<li><p style="text-align: left; margin-bottom: 0;">Water: "water", "canal", "aquafina", "aqua", "tap", "flood"</p></li>
+						<li><p style="text-align: left; margin-bottom: 0;">Toxin: "poison", "ccpvirus", "toxin"</p></li>
+						<li><p style="text-align: left; margin-bottom: 0;">Others: "salt", "saline", "monosodium", "nanoparticles", "sugar"</p></li>
+					</ul>
+					
+					<img src="images/nlp-05-nlpbargraph.png" alt="Bar Graph for Feature Comparison" style=" width: 90%; object-fit:contain;"/>
+					<p style="font-size: 0.8em; margin-bottom: 1em; width: 63%; margin-left:auto; margin-right:auto; line-height:130%; min-width:300px;">Figure 11: Bar Graph for Feature Comparison</p>
+					
+					<p style="text-align: justify;">Figure 11 displays the frequency each category has over our whole dataset. From this, we can gather that most users tweet that the COVID-19 vaccine has a Microchip implant. Second, users tweet that the COVID-19 vaccine makes them magnetic, and third that the COVID-19 vaccine is fake or only has water.</p>
+										
 				</div>
 			</div>
 
@@ -159,18 +188,18 @@
 				<div class="container">
 					<h3 style="text-align: left;">One Hot Encoding</h3>
 					<img src="images/one-hot-encoded.png" alt="One Hot Encoded Categorical Features" style=" width: 100%; object-fit:contain;"/>
-					<p style="font-size: 0.8em; margin-bottom: 1em; line-height:130%;">Figure N: (A) One Hot Encoded Account type, (B) One Hot Encoded Content type, and (C) One Hot Encoded Language feature </p>
-					<p style="text-align: justify; ">Shown in Figure N are the one hot encoded features. For each category of a feature, a new <b>binary feature</b> is created. The first feature we have implemented one hot encoding is for the <span style="background-color: #FFFF00">Account type</span>. Figure N-A shows the encoded table for these labels. Another feature that needs data encoding is <span style="background-color: #FFFF00">Content type</span>. Figure N-B shows the encoded table for these categories. Lastly, we also employed encoding on <span style="background-color: #FFFF00">Thread/Tweet Language</span>. Figure N-C shows the encoded table for this feature. Note that <b>0</b> represents the <b>absence</b> and <b>1</b> represents the <b>presence</b> of that categorical value.</p>
+					<p style="font-size: 0.8em; margin-bottom: 1em; line-height:130%;">Figure 12: (A) One Hot Encoded Account type, (B) One Hot Encoded Content type, and (C) One Hot Encoded Language feature </p>
+					<p style="text-align: justify; ">Shown in Figure 12 are the one hot encoded features. For each category of a feature, a new <b>binary feature</b> is created. The first feature we have implemented one hot encoding is for the <span style="background-color: #FFFF00">Account type</span>. Figure 12-A shows the encoded table for these labels. Another feature that needs data encoding is <span style="background-color: #FFFF00">Content type</span>. Figure 12-B shows the encoded table for these categories. Lastly, we also employed encoding on <span style="background-color: #FFFF00">Thread/Tweet Language</span>. Figure 12-C shows the encoded table for this feature. Note that <b>0</b> represents the <b>absence</b> and <b>1</b> represents the <b>presence</b> of that categorical value.</p>
 					
 
 					<h3 style="text-align: left;">Heat Map - Feature Correlation</h3>
 					<div class="row" style="flex-direction: row-reverse;">
 						<div class="col-8 col-12-medium col-12-small">
 							<img src="images/heat-map.png" alt="Content type and Language feature Correlation" style=" width: 90%; object-fit:contain; "/>
-							<p style="font-size: 0.8em; margin-bottom: -1em; line-height:130%;">Figure (N+1): Content type and Language feature Correlation</p>
+							<p style="font-size: 0.8em; margin-bottom: -1em; line-height:130%;">Figure 13: Content type and Language feature Correlation</p>
 						</div>
 						<div class="col-4 col-12-medium col-12-small">
-							<p style="text-align: justify; margin-bottom: 1em;">In the third research question of the project, we are looking for the <b>difference</b> in terms of content type between Filipino and Foreign misinformed tweets about COVID-19 vaccine implants. To explore this matter, the team visualized the correlation of the content type categories and the language feature categories using the <b>Heat Map - Feature Correlation</b> as shown in Figure (N+1). The visualization is achieved by merging the encoded tables of the <span style="background-color: #FFFF00">Content type</span> and the <span style="background-color: #FFFF00">Thread/Tweet Language</span> features. Then, we let Pandas tool process the merged table and create the plot.</p>
+							<p style="text-align: justify; margin-bottom: 1em;">In the third research question of the project, we are looking for the <b>difference</b> in terms of content type between Filipino and Foreign misinformed tweets about COVID-19 vaccine implants. To explore this matter, the team visualized the correlation of the content type categories and the language feature categories using the <b>Heat Map - Feature Correlation</b> as shown in Figure 13. The visualization is achieved by merging the encoded tables of the <span style="background-color: #FFFF00">Content type</span> and the <span style="background-color: #FFFF00">Thread/Tweet Language</span> features. Then, we let Pandas tool process the merged table and create the plot.</p>
 							<p style="text-align: justify; margin-bottom: 0.5em;">From the Heat Map - Feature Correlation, the team arrived with the following <b>observations</b> to help understand our dataset:</p>
 						</div>
 					</div>
