@@ -74,23 +74,21 @@
 			<div class="container" style="margin-bottom: 5em;">
 				<header>
 					<h2 style="text-align: justify;">ML: Computational Model</h2>
-					<p style="text-align: justify;">For the time series analysis, we first performed feature generation to create the necessary features to represent our data. Then, the methods peformed on the time series data are binning and interpolation. This <a href="https://github.com/mspardinas/cs132-g28-covid-vaccine-implants/blob/main/misc/Data-Exploration-TimeSeries.ipynb">Time Series Analysis document</a> contains the preprocessing procedures and visualizations for our time series data.</p>
+					<p style="text-align: justify;">For the computational model, we first choose a model while discussing its structure and mechanism. We the perform machine learning by training it with train dataset and evaluating it with test dataset. Lastly, we evaluate the performance of our model. You may refer to the <a href="https://colab.research.google.com/drive/1CfNoxyPD2Zq5XwuGfrqtKr9FcnG966sf">Models and Analysis document</a> for this section.</p>
 				</header>
 
 				<div class="container">
-					<h3 style="text-align: left;">Feature Generation</h3>
+					<h3 style="text-align: left;">Structure and Mechanism</h3>
+					<p style="text-align: justify;">The team decided to work on with the same data, which is time series data, for computational model. However, instead of using Linear Regression, we use <b>Support Vector Regression (SVR)</b> as our computational model. SVR is a <b>machine learning algorithm</b> that finds a function to approximate the relationship between the input variable and the output variable. The challenge is that the function obtained must maintain a minimal prediction error of the output. Unlike Linear Regression, SVR can handle <b>non-linear relationships</b> between the predictor and the outcome using a kernel function which maps data on a higher-dimensional space. In this project, we perform <b>supervised SVR</b>. Hence, it is our task to test different hyperparameters to look for the best-fit parameters that would optimize the model.</p>
+
+					<h3 style="text-align: left;">Training with Validation Set</h3>
 					<p style="text-align: justify;">The team intends to observe <b>what timeframes</b> have high frequencies of posted tweets. This will help determine what events triggered the spread of tweets containing misinfo/disinfo. To fulfill this, we created new a feature named <span style="background-color: #FFFF00">Count</span> as part of time series data. Count is the number of tweets posted in a certain time or time range. From <b>Count</b> and <b>Language</b> features, we generated two more features: <span style="background-color: #FFFF00">Filipino_Count</span> and <span style="background-color: #FFFF00">Foreign_Count</span>. Filipino_Count is the number of Filipino tweets posted given a certain time or time range. Foreign_Count is the number of Foreign tweets posted given a certain time or time range.</p>
 
-					<h3 style="text-align: left;">Binning</h3>
-					<div class="row">
-						<div class="col-6 col-12-medium col-12-small" style="padding-bottom:0;">
-							<img src="images/binning.png" alt="Semimonthly Binning of Time Series Data" style=" width: 100%; object-fit:contain; "/>
-							<p style="font-size: 0.8em; margin-bottom:0; line-height:130%;" >Figure 3: Semimonthly Binning of Time Series Data</p>
-						</div>
-						<div class="col-6 col-12-medium col-12-small">
-							<p style="text-align: justify; ">To organize our time series data, the group performed data binning on the newly generated features. The binning technique employed is via <b>grouping</b>. The features are grouped as sum of <span style="background-color: #FFFF00">Count</span>, <span style="background-color: #FFFF00">Filipino_Count</span>, or <span style="background-color: #FFFF00">Foreign_Count</span> corresponding to its columns in a semimonthly manner as shown in Figure 3. For further details about the binned data, it has 71 rows which implies having <b>71 semimonthly timeranges</b> obtained from 15 January 2021 to 31 December 2023.</p>
-						</div>
-					</div>
+					<h3 style="text-align: left;">Evaluation on a Test Data</h3>
+					<p style="text-align: justify;">The team intends to observe <b>what timeframes</b> have high frequencies of posted tweets. This will help determine what events triggered the spread of tweets containing misinfo/disinfo. To fulfill this, we created new a feature named <span style="background-color: #FFFF00">Count</span> as part of time series data. Count is the number of tweets posted in a certain time or time range. From <b>Count</b> and <b>Language</b> features, we generated two more features: <span style="background-color: #FFFF00">Filipino_Count</span> and <span style="background-color: #FFFF00">Foreign_Count</span>. Filipino_Count is the number of Filipino tweets posted given a certain time or time range. Foreign_Count is the number of Foreign tweets posted given a certain time or time range.</p>
+
+					<h3 style="text-align: left;">Evaluation of Performance</h3>
+					<p style="text-align: justify;">The team intends to observe <b>what timeframes</b> have high frequencies of posted tweets. This will help determine what events triggered the spread of tweets containing misinfo/disinfo. To fulfill this, we created new a feature named <span style="background-color: #FFFF00">Count</span> as part of time series data. Count is the number of tweets posted in a certain time or time range. From <b>Count</b> and <b>Language</b> features, we generated two more features: <span style="background-color: #FFFF00">Filipino_Count</span> and <span style="background-color: #FFFF00">Foreign_Count</span>. Filipino_Count is the number of Filipino tweets posted given a certain time or time range. Foreign_Count is the number of Foreign tweets posted given a certain time or time range.</p>
 
 					
 				</div>
