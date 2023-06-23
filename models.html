@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<!--
+	Miniport by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Data Modeling and Analysis</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="container">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="problem.html">Problem</a></li>
+					<li><a href="data.html">Data</a></li>
+					<li><a href="#models">Models</a></li>
+					<li><a href="#results">Results</a></li>
+					<li><a href="#team">Team</a></li>
+				</ul>
+			</nav>
+
+		<!-- Data -->
+		<article id="data-exploration" class="wrapper style3">
+			<div class="container" style="margin-bottom: 5em;">
+				<header>
+					<h2>Fitting models to our time series data.</h2>
+					<p style="text-align: justify; margin-bottom: 1em; margin-top: 2em;">For data modeling and analysis, the team would implement one <b>statistical model</b> and one <b>computational model</b>. These models will represent real-life events that aims to uncover insights, patterns, and trends in our data. However, our group acknowledges that these models have their limitations in representing actual events since there are infinite information that cannot be contained within our dataset. Nonetheless, having these models are still useful in making judgment and analysis.</p> 
+					<p style="text-align: justify;">For this project, we aim to create a statistical model that will address our second problem regarding time series data. Creating the model could aids in <b>testing our hypothesis</b> — whether the release of COVID-19 vaccine in the Philippines triggered the surge of misinformation about harmful implants on the vaccines. Then, the computational model employs <b>machine learning</b> which feeds on train data and predicts the test data. The prediction captures non-linear relationship.</p>
+				</header>
+			</div>
+
+			<div class="container" style="margin-bottom: 5em;">
+				<header>
+					<h2 style="text-align: justify;">Statistical Hypothesis Test</h2>
+					<p style="text-align: justify;">To perform the hypothesis test, we first identified the appropriate statistical test. Then, we have validated the assumptions required for model. We also have provided statistics and visualization of our model. Lastly, we analyze and interpret the model. You may refer to the <a href="https://colab.research.google.com/drive/1CfNoxyPD2Zq5XwuGfrqtKr9FcnG966sf">Models and Analysis document</a> for this section.</p>
+				</header>
+
+				<div class="container">
+					<h3 style="text-align: left;">Identify the Statistical Test</h3>
+					<p style="text-align: justify;">In choosing a statistical test, we must look into the types of variables involved in our data. The predictor variable is <span style="background-color: #FFFF00">Date</span> which is a quantitative variable. The outcome variable is <span style="background-color: #FFFF00">Count</span> which is also quantitative variable. Since both the predictor and outcome variables are quantitative, we must settle with <b>Regression Test</b>. Finally, we should check if we have more than one predictor variable. The team decided to test three predictors based on time periods which include Dates when the Vaccine was not yet released, Dates when the Vaccine was just released, and Dates after 70% of Metro Manila population has been vaccinated. Since there are <b>multiple predictors</b> or periods, we opted to use <b>multiple linear regression</b>.</p>
+
+					<h3 style="text-align: left;">Validate the Assumptions</h3>
+					<div class="row">
+						<div class="col-6 col-12-medium col-12-small" style="padding-bottom:0;">
+							<img src="images/binning.png" alt="Semimonthly Binning of Time Series Data" style=" width: 95%; object-fit:contain; "/>
+							<p style="font-size: 0.8em; margin-bottom:0; line-height:130%;" >Figure 1: Semimonthly Binning of Time Series Data</p>
+						</div>
+						<div class="col-6 col-12-medium col-12-small">
+							<p style="text-align: justify; margin-bottom:0.5em; ">To recall, the group performed data binning on the obtained time series data. The binning technique employed is via <b>grouping</b>. The features are grouped as sum of <span style="background-color: #FFFF00">Count</span> in a semimonthly manner as shown in Figure 1. When binning was performed, the team generated <b>71 rows</b> from the 71 semimonthly timeranges extracted from 15th January 2021 to 31st December 2023. With that, the assumption of having a 30 sample size or <b>greater sample size</b> was achieved.</p>
+						</div>
+					</div>
+					<p style="text-align: justify;">Since Linear Regression is a parametric test, two more assumptions to be validated are skewness and kurtosis. Skewness is the measure of asymmetry across a distribution. In our computations, the Pearson's Median <span style="background-color: #FFFF00">Skewness</span> of our data is <b>1.0</b> which implies a <b>mildly right skewed</b> data. As such, no transformations are needed. For another validation, Kurtosis is the measure of tailedness across a distribution. The <span style="background-color: #FFFF00">Kurtosis</span> obtained is <b>5.43</b> which implies <b>Leptokurtosis</b> or positive kurtosis. Since our Kurtosis is 2.43 above normal which is 3.00, it is important to note that a higher kurtosis provides lesser  confidence level.</p>
+
+					<h3 style="text-align: left;">Report the Statistics</h3>
+					<p style="text-align: justify; margin-bottom: 1em;">To visualize our statistical hypothesis test, the segmented <b>linear regression model</b> was graphed over the scatter plot of actual data. First each time period, we have obtained different linear regressions (LR) with their correspoding p-value. For dates when the vaccine was <span style="background-color: #FFFF00">not yet</span> released, from January 2020 to January 2021, the LR is in red with a <b>0.061</b> p-value. For dates when the vaccine was just <span style="background-color: #FFFF00">released</span>, from January 2021 to September 2021, the LR is in green with a <b>0.031</b> p-value. For dates when <span style="background-color: #FFFF00">70% of population</span> was already vaccinated in Metro Manila, from September 2021 to December 2022, the LR is in yellow with a <b>0.504</b> p-value.</p>
+					<img src="images/multiple-linear-regression.png" alt="Linear Regression with Scatter Plot" style=" width: 95%; object-fit:contain;"/>
+					<p style="font-size: 0.8em; margin-bottom: 1em; line-height:130%;">Figure 2: Multiple Linear Regression Model of three Predictors over a Scatter Plot of Actual Data </p>
+
+					<p style="text-align: justify;">By looking at the visualizations, we can observe that the increase on the first time period was <b>gradual</b>. Then, when the vaccine got released, a <b>sudden surge</b> of misinformed tweets regarding implants on COVID vaccines occured. Lastly, after a huge number of people got vaccinated, the number of misinformed tweets <b>moderately</b> lessened.</p>
+					
+
+					<h3 style="text-align: left;">Interpret the Results</h3>
+					<p style="text-align: justify;">From our model, we could conclude the following: (1) there is no significant relationship, p>0.05, between the event before COVID vaccine's release and the count of misinformed tweets; (2) there is a <b>significant relationship</b>, p&lt0.05, between the event of <span style="background-color: #FFFF00">COVID vaccine's release</span> and the count of <span style="background-color: #FFFF00">misinformed tweets</span>; and (3) there is no significant relationship, p>0.05, between the event when 70% popoulation got vaccinated and the count of misinformed tweets. Therefore, we <b>accept our hypothesis</b> — the release of the COVID-19 vaccine triggered a surge of misinformed tweets.</p>
+
+				</div>
+			</div>
+
+			<div class="container" style="margin-bottom: 5em;">
+				<header>
+					<h2 style="text-align: justify;">ML: Computational Model</h2>
+					<p style="text-align: justify;">For the time series analysis, we first performed feature generation to create the necessary features to represent our data. Then, the methods peformed on the time series data are binning and interpolation. This <a href="https://github.com/mspardinas/cs132-g28-covid-vaccine-implants/blob/main/misc/Data-Exploration-TimeSeries.ipynb">Time Series Analysis document</a> contains the preprocessing procedures and visualizations for our time series data.</p>
+				</header>
+
+				<div class="container">
+					<h3 style="text-align: left;">Feature Generation</h3>
+					<p style="text-align: justify;">The team intends to observe <b>what timeframes</b> have high frequencies of posted tweets. This will help determine what events triggered the spread of tweets containing misinfo/disinfo. To fulfill this, we created new a feature named <span style="background-color: #FFFF00">Count</span> as part of time series data. Count is the number of tweets posted in a certain time or time range. From <b>Count</b> and <b>Language</b> features, we generated two more features: <span style="background-color: #FFFF00">Filipino_Count</span> and <span style="background-color: #FFFF00">Foreign_Count</span>. Filipino_Count is the number of Filipino tweets posted given a certain time or time range. Foreign_Count is the number of Foreign tweets posted given a certain time or time range.</p>
+
+					<h3 style="text-align: left;">Binning</h3>
+					<div class="row">
+						<div class="col-6 col-12-medium col-12-small" style="padding-bottom:0;">
+							<img src="images/binning.png" alt="Semimonthly Binning of Time Series Data" style=" width: 100%; object-fit:contain; "/>
+							<p style="font-size: 0.8em; margin-bottom:0; line-height:130%;" >Figure 3: Semimonthly Binning of Time Series Data</p>
+						</div>
+						<div class="col-6 col-12-medium col-12-small">
+							<p style="text-align: justify; ">To organize our time series data, the group performed data binning on the newly generated features. The binning technique employed is via <b>grouping</b>. The features are grouped as sum of <span style="background-color: #FFFF00">Count</span>, <span style="background-color: #FFFF00">Filipino_Count</span>, or <span style="background-color: #FFFF00">Foreign_Count</span> corresponding to its columns in a semimonthly manner as shown in Figure 3. For further details about the binned data, it has 71 rows which implies having <b>71 semimonthly timeranges</b> obtained from 15 January 2021 to 31 December 2023.</p>
+						</div>
+					</div>
+
+					
+				</div>
+			</div>
+
+			
+
+		</article>
+
+		<!-- Team -->
+			<script src="escapedTeam.js"></script>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
