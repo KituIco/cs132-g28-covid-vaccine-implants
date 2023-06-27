@@ -29,24 +29,90 @@
 		<article id="data-exploration" class="wrapper style3">
 			<div class="container" style="margin-bottom: 5em;">
 				<header>
-					<h2>Findings header</h2>
-					<p style="text-align: justify; margin-bottom: 1em; margin-top: 2em;">Header Intro</p> 
-					<p style="text-align: justify;">Header Intro</p>
+					<h2>Results And Discussion</h2>
+					<!-- <p style="text-align: justify; margin-bottom: 1em; margin-top: 2em;">Header Intro</p> 
+					<p style="text-align: justify;">Header Intro</p> -->
 				</header>
 			</div>
 
 			<div class="container" style="margin-bottom: 5em;">
 				<header>
-					<h2 style="text-align: justify;">Section Header</h2>
-					<p style="text-align: justify;">Section Intro</p>
+					<!-- <h2 style="text-align: justify;"> Results </h2> -->
+					<p style="text-align: justify;">The results are presented into three: "Natural Language Processing", 
+						"Regression on Time Series", and "Categorical Data Encoding". Likewise, the discussions are 
+						presented into three: "Natural Language Processing", "Regression on Time Series", and "Categorical Data Encoding"</p>
+					<br><br>
+
+					<h3 style="text-align: left;">Natural Language Processing</h3>
+					<p style="text-align: justify;">This section wants to answer the question: "Which implant is most
+						 frequently mentioned in tweets?"</p> <br>
+					<p style="text-align: justify;"> The implants identified were "Magnet", "Microchip", "Water", "Toxin",
+						 and "Others". This is represented using a Feature Comparison on a bar graph.
+						Microchip is the most mentioned implant with 85 tweet counts. </p> <br>
+					<p style="text-align: justify;"> The implant with the highest frequency of tweets is microchip.
+						Magnet is only the second highest frequently mentioned on tweets.
+						Toxin has the least frequency.</p>
+
+					<br>
+					<h3 style="text-align: left;">Regression on Time Series</h3>
+					<p style="text-align: justify;">This section wants to answer the question: "When were tweets about
+						 implants in COVID-19 vaccines prevalent?"</p> <br>
+					<p style="text-align: justify;">Data modeling via Linear Regression is performed on three time periods.
+						</p> <br>
+					<p style="text-align: justify;"> There is a significant relationship, p=0.03, between the event of 
+						COVID-19 vaccine release and tweet counts. There is no significant relationship, p>0.05, 
+						between other events and tweet counts.</p>
+
+					<br>
+					<h3 style="text-align: left;">Categorical Data Encoding</h3>
+					<p style="text-align: justify;">This section wants to answer the question: "Is there a difference with
+						 content type between Filipino and Foreign tweets?"</p> <br>
+					<p style="text-align: justify;"> For this section, visualization of the Feature Correlation between content 
+						type and language.</p> <br>
+					<p style="text-align: justify;"> Has moderate positive correlation [>0.3] on Emotional Type and Filipino tweets.
+						Has moderate positive correlation [>0.3] on Rational Type and Foreign Tweet.
+						Transactional has weak correlation [<0.1]</p>
+
 				</header>
 
-				<div class="container">
+				<!-- <div class="container">
 					<h3 style="text-align: left;">Subsection Header</h3>
 					<p style="text-align: justify;">Subsection Content</p>
 
 					
-				</div>
+				</div> -->
+			</div>
+
+			
+			<div class="container" style="margin-bottom: 5em;">
+				<header>
+					<h2>Conclusion</h2>
+				</header>
+			</div>
+
+			<div class="container" style="margin-bottom: 5em;">
+				<header>
+
+					<h3 style="text-align: left;">Topic Analysis</h3>
+					<p style="text-align: justify;">Based on the natural language process, our hypothesis for
+						 the first research question failed. Instead, microchip is the most frequently mentioned implant.
+						Magnet is not the most frequently mentioned implant but is second to microchip.</p>
+
+					<br>
+					<h3 style="text-align: left;">Time Series Analysis</h3>
+					<p style="text-align: justify;">Based on the linear regression model, our hypothesis for 
+						the second research question passed. The release of the COVID-19 vaccine triggered 
+						a surge of tweets. The events outside the period of COVID-19 vaccine release
+						 had no significant effect on the change in the spread of tweets.</p> 
+
+					<br>
+					<h3 style="text-align: left;">Content Analysis</h3>
+					<p style="text-align: justify;">Based on the feature correlation, our hypothesis for
+						 the third research question passed. Filipino tweets are more emotional while Foreign
+						  tweets are more rational. Below are screenshots of Filipino-Emotional tweets 
+						  and Foreign-Rational Tweets.</p>
+
+				</header>
 			</div>
 
 		</article>
